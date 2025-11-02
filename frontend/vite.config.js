@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/VaccinKids/', // Base path pour GitHub Pages
   css: {
     postcss: {
       plugins: [
@@ -13,5 +14,9 @@ export default defineConfig({
         autoprefixer(),
       ],
     },
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
   },
 })
